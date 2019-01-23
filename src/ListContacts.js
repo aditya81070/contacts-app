@@ -58,7 +58,4 @@ class ListContacts extends Component {
   }
 }
 
-ListContacts.propTypes = {
-
-}
 export default ListContacts
