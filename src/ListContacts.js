@@ -34,12 +34,16 @@ class ListContacts extends Component {
             onChange={(event) => this.updateQuery(event.target.value)}
             className='search-contacts'
             placeholder='Search Contacts' />
+          <a
+            href='#create'
+            onClick={() => {}}
+            className='add-contact' />
         </div>
 
         {contacts.length !== showingContacts.length && (
           <div className='showing-contacts'>
             <span>Now showing {showingContacts.length} of {contacts.length}</span>
-            <button onClick={this.clearQuery}>show all</button> 
+            <button onClick={this.clearQuery}>show all</button>
           </div>
         )}
         <ol className='contact-list'>
