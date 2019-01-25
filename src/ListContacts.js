@@ -11,6 +11,10 @@ class ListContacts extends Component {
       query: query.trim()
     })
   }
+
+  clearQuery = () => {
+    this.updateQuery('')
+  }
   static propTypes = {
     contacts: PropTypes.array.isRequired,
     onDeleteContact: PropTypes.func.isRequired
@@ -31,6 +35,13 @@ class ListContacts extends Component {
             className='search-contacts'
             placeholder='Search Contacts' />
         </div>
+
+        {contacts.length !== showingContacts.length && (
+          <div className='showing-contacts'>
+            <span>Now showing {showingContacts.length} of {contacts.length}</span>
+            <button onClick={this.clearQuery}>show all</button> 
+          </div>
+        )}
         <ol className='contact-list'>
           {
             showingContacts.map((contact) => (
