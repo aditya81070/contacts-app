@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 class ListContacts extends Component {
@@ -34,9 +35,8 @@ class ListContacts extends Component {
             onChange={(event) => this.updateQuery(event.target.value)}
             className='search-contacts'
             placeholder='Search Contacts' />
-          <a
-            href='#create'
-            onClick={() => {}}
+          <Link
+            to='/create'
             className='add-contact' />
         </div>
 
